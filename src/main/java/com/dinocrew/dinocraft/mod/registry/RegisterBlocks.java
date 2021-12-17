@@ -3,6 +3,7 @@ package com.dinocrew.dinocraft.mod.registry;
 import com.dinocrew.dinocraft.Dinocraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -89,6 +90,17 @@ public class RegisterBlocks {
     public static  final RegistryObject<Item> DRAGONWOOD_SHOVEL = ITEMS.register("dragonwood_shovel", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static  final RegistryObject<Item> DRAGONWOOD_HOE = ITEMS.register("dragonwood_hoe", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static  final RegistryObject<Item> DRAGONWOOD_AXE = ITEMS.register("dragonwood_axe", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+
+    public static  final RegistryObject <Item> RAW_DINO_FLESH = ITEMS.register("raw_dino_flesh", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> DINO_FLESH = ITEMS.register("dino_flesh", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> BERRIES = ITEMS.register("berries", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> INFECTED_BERRIES = ITEMS.register("infected_berries", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> TROPICAL_BERRIES = ITEMS.register("tropical_berries", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> CYAD_SEEDS = ITEMS.register("cyad_seeds", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> ROTTING_CYADS = ITEMS.register("rotting_cyads", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static  final RegistryObject <Item> CYAD_LEAF = ITEMS.register("cyad_leaf", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+
+
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
         return false;
