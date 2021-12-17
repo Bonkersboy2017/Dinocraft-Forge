@@ -41,6 +41,7 @@ public class RegisterBlocks {
     public static final RegistryObject<Block> DINOBENCH = BLOCKS.register("dinobench", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY, MaterialColor.TERRACOTTA_GRAY).strength(0.2F, 0.2f).sound(SoundType.WET_GRASS)));
     public static final RegistryObject<Item> DINOBENCH_ITEM = ITEMS.register("dinobench", () -> new BlockItem(DINOBENCH.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 
+
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
         return false;
     }
@@ -49,6 +50,8 @@ public class RegisterBlocks {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
+
+        DragonwoodMaterial.registerAll();
 
     }
 
