@@ -3,6 +3,9 @@ package com.dinocrew.dinocraft.mod.entity.event;
 import com.dinocrew.dinocraft.Dinocraft;
 import com.dinocrew.dinocraft.mod.entity.ModEntityTypes;
 import com.dinocrew.dinocraft.mod.entity.common.entity.SauropodEntity;
+import com.dinocrew.dinocraft.mod.entity.common.entity.StegoraptorEntity;
+import com.dinocrew.dinocraft.mod.entity.common.entity.TheropodEntity;
+import com.dinocrew.dinocraft.mod.entity.common.entity.TroodonEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -13,5 +16,8 @@ public class CommonModEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.SAUROPOD_ENTITY.get(), SauropodEntity.createAttributes().build());
+        event.put(ModEntityTypes.TRODOON_ENTITY.get(), TroodonEntity.createAttributes().build());
+        event.put(ModEntityTypes.THEROPOD_ENTITY.get(), TheropodEntity.createAttributes().build());
+        event.put(ModEntityTypes.STEGORAPTOR_ENTITY.get(), StegoraptorEntity.createAttributes().build());
     }
 }

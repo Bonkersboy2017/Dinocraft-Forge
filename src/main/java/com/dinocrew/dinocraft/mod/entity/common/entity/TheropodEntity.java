@@ -4,7 +4,6 @@ import com.dinocrew.dinocraft.mod.entity.ModEntityTypes;
 import com.dinocrew.dinocraft.mod.registry.RegisterBlocks;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -12,13 +11,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
-public class SauropodEntity extends Animal {
-    public SauropodEntity(EntityType<SauropodEntity> entityType, Level level) {
+public class TheropodEntity extends Animal {
+    public TheropodEntity(EntityType<TheropodEntity> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -43,6 +40,9 @@ public class SauropodEntity extends Animal {
 
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
-        return ModEntityTypes.SAUROPOD_ENTITY.get().create(level);
+        return ModEntityTypes.THEROPOD_ENTITY.get().create(level);
     }
 }
+
+
+
