@@ -1,10 +1,7 @@
 package com.dinocrew.dinocraft.mod.entity;
 
 import com.dinocrew.dinocraft.Dinocraft;
-import com.dinocrew.dinocraft.mod.entity.common.entity.SauropodEntity;
-import com.dinocrew.dinocraft.mod.entity.common.entity.StegoraptorEntity;
-import com.dinocrew.dinocraft.mod.entity.common.entity.TheropodEntity;
-import com.dinocrew.dinocraft.mod.entity.common.entity.TroodonEntity;
+import com.dinocrew.dinocraft.mod.entity.common.entity.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -35,9 +32,15 @@ public class ModEntityTypes {
         public static final RegistryObject<EntityType<StegoraptorEntity>> STEGORAPTOR_ENTITY = ENTITIES.register("stegoraptor_entity",
             () -> EntityType.Builder.of(StegoraptorEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
                     .build(new ResourceLocation(Dinocraft.MOD_ID, "stegoraptor_entity").toString()));
-    
-    
 
+
+    public static final RegistryObject<EntityType<MicroraptorEntity>> MICRORAPTOR_ENTITY = ENTITIES.register("microraptor_entity",
+            () -> EntityType.Builder.of(MicroraptorEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
+                    .build(new ResourceLocation(Dinocraft.MOD_ID, "microraptor_entity").toString()));
+//
+//    public static final RegistryObject<EntityType<MosasaurusEntity>> MOSASAURUS_ENTITY = ENTITIES.register("mosasaurus_entity",
+//            () -> EntityType.Builder.of(MosasaurusEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
+//                    .build(new ResourceLocation(Dinocraft.MOD_ID, "mosasaurus_entity").toString()));
 
 }
 

@@ -2,14 +2,8 @@ package com.dinocrew.dinocraft.mod.entity.client.event;
 
 import com.dinocrew.dinocraft.Dinocraft;
 import com.dinocrew.dinocraft.mod.entity.ModEntityTypes;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.SauropodEntityRenderer;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.StegoraptorEntityRenderer;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.TheropodEntityRenderer;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.TroodonEntityRenderer;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.model.SauropodEntityModel;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.model.StegoraptorEntityModel;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.model.TheropodEntityModel;
-import com.dinocrew.dinocraft.mod.entity.client.renderer.model.TroodonEntityModel;
+import com.dinocrew.dinocraft.mod.entity.client.renderer.*;
+import com.dinocrew.dinocraft.mod.entity.client.renderer.model.*;
 import com.dinocrew.dinocraft.mod.entity.common.entity.StegoraptorEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -29,6 +23,8 @@ public class ClientModEvents {
         event.registerLayerDefinition(TroodonEntityModel.LAYER_LOCATION, TroodonEntityModel::createBodyLayer);
         event.registerLayerDefinition(TheropodEntityModel.LAYER_LOCATION, TheropodEntityModel::createBodyLayer);
         event.registerLayerDefinition(StegoraptorEntityModel.LAYER_LOCATION, StegoraptorEntityModel::createBodyLayer);
+        event.registerLayerDefinition(MicroraptorEntityModel.LAYER_LOCATION, MicroraptorEntityModel::createBodyLayer);
+        // event.registerLayerDefinition(StegoraptorEntityModel.LAYER_LOCATION, StegoraptorEntityModel::createBodyLayer);
     }
 
 
@@ -39,5 +35,8 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.TRODOON_ENTITY.get(), TroodonEntityRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.THEROPOD_ENTITY.get(), TheropodEntityRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STEGORAPTOR_ENTITY.get(), StegoraptorEntityRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.MICRORAPTOR_ENTITY.get(), MicroraptorEntityRenderer::new);
+
+        //event.registerLayerDefinition(StegoraptorEntityModel.LAYER_LOCATION, StegoraptorEntityModel::createBodyLayer);
     }
 }
