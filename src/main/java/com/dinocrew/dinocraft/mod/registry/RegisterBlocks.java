@@ -100,6 +100,8 @@ public class RegisterBlocks {
     public static  final RegistryObject <Item> ROTTING_CYADS = ITEMS.register("rotting_cyads", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> CYAD_LEAF = ITEMS.register("cyad_leaf", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
 
+    public static final RegistryObject<Block> DINOSAUR_TEMPERED_GLASS = BLOCKS.register("dinosaur_tempered_glass", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY, MaterialColor.TERRACOTTA_GRAY).strength(0.2F, 0.2f).sound(SoundType.WET_GRASS)));
+    public static final RegistryObject<Item> DINOSAUR_TEMPERED_GLASS_ITEM = ITEMS.register("dinosaur_tempered_glass", () -> new BlockItem(DINOSAUR_TEMPERED_GLASS.get(), new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
