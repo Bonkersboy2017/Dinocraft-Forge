@@ -17,9 +17,44 @@ public class MicroraptorEntityModel<Type extends MicroraptorEntity> extends Enti
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "microraptorentitymodel"), "main");
 	private final ModelPart body;
+	private final ModelPart neck;
+	private final ModelPart head;
+	private final ModelPart right_leg;
+	private final ModelPart right_knee;
+	private final ModelPart right_foot;
+	private final ModelPart left_leg;
+	private final ModelPart left_knee;
+	private final ModelPart left_foot;
+	private final ModelPart right_wing1;
+	private final ModelPart right_wing2;
+	private final ModelPart right_wing3;
+	private final ModelPart left_wing1;
+	private final ModelPart left_wing2;
+	private final ModelPart left_wing3;
+	private final ModelPart tail1;
+	private final ModelPart tail2;
+	private final ModelPart tail3;
+	private float oldangle;
 
 	public MicroraptorEntityModel(ModelPart root) {
 		this.body = root.getChild("body");
+		this.tail1 = this.body.getChild("tail1");
+		this.tail2 = this.tail1.getChild("tail2");
+		this.tail3 = this.tail2.getChild("tail3");
+		this.left_wing1 = this.body.getChild("left_wing1");
+		this.left_wing2 = this.left_wing1.getChild("left_wing2");
+		this.left_wing3 = this.left_wing2.getChild("left_wing3");
+		this.right_wing1 = this.body.getChild("right_wing1");
+		this.right_wing2 = this.right_wing1.getChild("right_wing2");
+		this.right_wing3 = this.right_wing2.getChild("right_wing3");
+		this.left_leg = this.body.getChild("left_leg");
+		this.left_knee = this.left_leg.getChild("left_knee");
+		this.left_foot = this.left_knee.getChild("left_foot");
+		this.right_leg = this.body.getChild("right_leg");
+		this.right_knee = this.right_leg.getChild("right_knee");
+		this.right_foot = this.right_knee.getChild("right_foot");
+		this.neck = this.body.getChild("neck");
+		this.head = this.neck.getChild("head");
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -84,8 +119,119 @@ public class MicroraptorEntityModel<Type extends MicroraptorEntity> extends Enti
 	}
 
 	@Override
-	public void setupAnim(Type p_102618_, float p_102619_, float p_102620_, float p_102621_, float p_102622_, float p_102623_) {
+	public void setupAnim(Type entity, float limbAngle, float limbDistance, float animationProgress, float headyRot, float headzRot) {
+		float pi = 3.14159265358979323846264338327950288F;
+		this.neck.setRotation(-0.6981F, 0.0F, 0.0F);
+		this.head.setRotation(0.7854F, 0.0F, 0.0F);
+		this.right_foot.setRotation(-0.3491F, 0.0F, 0.0F);
+		this.left_foot.setRotation(-0.3491F, 0.0F, 0.0F);
 
+		if(!entity.isOnGround()) {
+
+			this.body.yRot = headyRot;
+
+			//this.body.xRot = this.oldangle - headyRot;
+
+			this.oldangle = headyRot;
+
+			this.body.zRot = headzRot;
+
+
+			this.right_wing1.yRot = 0;
+			this.left_wing1.yRot = 0;
+			this.right_wing1.zRot = 0;
+			this.left_wing1.zRot = 0;
+			this.right_wing1.xRot = (float)Math.cos(animationProgress/5)/3;
+			this.left_wing1.xRot = -(float)Math.cos(animationProgress/5)/3;
+
+			this.right_wing2.yRot = 0;
+			this.left_wing2.yRot = 0;
+			this.right_wing2.zRot = 0;
+			this.left_wing2.zRot = 0;
+			this.right_wing2.xRot = (float)Math.cos(animationProgress/5)/3;
+			this.left_wing2.xRot = -(float)Math.cos(animationProgress/5)/3;
+
+			this.right_wing3.yRot = 0;
+			this.left_wing3.yRot = 0;
+			this.right_wing3.zRot = 0;
+			this.left_wing3.zRot = 0;
+			this.right_wing3.xRot = (float)Math.cos(animationProgress/5)/3;
+			this.left_wing3.xRot = -(float)Math.cos(animationProgress/5)/3;
+
+			this.tail1.yRot = 0;
+			this.tail2.yRot = 0;
+			this.tail3.yRot = 0;
+
+			this.tail2.zRot = 0;
+			this.tail3.zRot = 0;
+
+			this.tail1.xRot = 0;
+			this.tail2.xRot = 0;
+			this.tail3.xRot = 0;
+
+			this.tail1.zRot = 0;
+
+			this.left_leg.zRot = 1;
+			this.right_leg.zRot = 1;
+
+			this.left_knee.zRot = 1;
+			this.right_knee.zRot = 1;
+
+			this.head.zRot = 0;
+			this.neck.zRot = 0;
+			this.head.yRot = 0;
+
+		} else {
+
+			this.body.yRot = 0;
+
+			this.body.xRot = 0;
+
+			this.oldangle = headyRot;
+
+			this.body.zRot = 0;
+
+			this.right_wing1.setRotation(-2.2772F, 1.196F, -0.6124F);
+			this.left_wing1.setRotation(-2.2772F, -1.196F, 0.6124F);
+
+			this.right_wing2.yRot = 0;
+			this.left_wing2.yRot = 0;
+			this.right_wing2.xRot = 0;
+			this.left_wing2.xRot = 0;
+			this.right_wing2.zRot = 0;
+			this.left_wing2.zRot = 0;
+
+			this.right_wing3.yRot = 0;
+			this.left_wing3.yRot = 0;
+			this.right_wing3.xRot = 0;
+			this.left_wing3.xRot = 0;
+			this.right_wing3.zRot = 0;
+			this.left_wing3.zRot = 0;
+
+			this.tail1.yRot = -(float)Math.cos(animationProgress/5)/5;
+			this.tail2.yRot = -(float)Math.cos(animationProgress/5)/5;
+			this.tail3.yRot = -(float)Math.cos(animationProgress/5)/5;
+
+			this.tail1.xRot = (float)Math.cos(animationProgress/5)/5;
+			this.tail2.xRot = (float)Math.cos(animationProgress/5)/5;
+			this.tail3.xRot = (float)Math.cos(animationProgress/5)/5;
+
+			this.head.zRot = 0.7854F;
+			this.neck.zRot = -0.6981F;
+
+			this.head.yRot = headyRot;
+
+			this.tail1.zRot = -(float)Math.sin(animationProgress/5)/20 - 20 * pi/180;
+			this.tail2.zRot = (float)Math.sin(animationProgress/5)/20 + 10 * pi/180;
+			this.tail3.zRot = -(float)Math.sin(animationProgress/5)/20 - 10 * pi/180;
+
+			this.left_leg.zRot = (float)Math.cos(limbAngle * 0.6662F + 3.1415927F) * 1.4F * limbDistance / 2 - 0.3491F;
+			this.right_leg.zRot = -(float)Math.cos(limbAngle * 0.6662F + 3.1415927F) * 1.4F * limbDistance / 2 - 0.3491F;
+
+			this.left_knee.zRot = (float)Math.cos(limbAngle * 0.6662F + 3.1415927F) * 1.4F * limbDistance / 2 + 0.6981F;
+			this.right_knee.zRot = -(float)Math.cos(limbAngle * 0.6662F + 3.1415927F) * 1.4F * limbDistance / 2 + 0.6981F;
+
+		}
 
 
 	}
