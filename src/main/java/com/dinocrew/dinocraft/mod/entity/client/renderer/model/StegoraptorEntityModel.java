@@ -29,15 +29,15 @@ public class StegoraptorEntityModel<Type extends StegoraptorEntity> extends Enti
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-6.0F, -6.0F, -9.0F, 12.0F, 12.0F, 18.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 51).addBox(0.0F, -12.0F, -7.0F, 0.0F, 6.0F, 14.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 2.0F, 0.0F, -0.1745F, 0.0F, 0.0F));
+				.texOffs(0, 51).addBox(0.0F, -12.0F, -7.0F, 0.0F, 6.0F, 14.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 2.0F, 0.0F, -0.1745F, 0.0F, 0.0F));
 
 		PartDefinition neck1 = body.addOrReplaceChild("neck1", CubeListBuilder.create().texOffs(58, 48).addBox(-4.0F, -4.5F, -8.0F, 8.0F, 9.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -1.5F, -5.0F, -0.5236F, 0.0F, 0.0F));
 
 		PartDefinition neck2 = neck1.addOrReplaceChild("neck2", CubeListBuilder.create().texOffs(78, 0).addBox(-3.0F, -3.0F, -7.25F, 6.0F, 6.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, -6.25F, -0.48F, 0.0F, 0.0F));
 
 		PartDefinition head = neck2.addOrReplaceChild("head", CubeListBuilder.create().texOffs(24, 34).addBox(-4.5F, -5.0F, -12.0F, 9.0F, 10.0F, 12.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 12).addBox(0.0F, -11.0F, -12.0F, 0.0F, 16.0F, 18.0F, new CubeDeformation(0.0F))
-		.texOffs(70, 79).addBox(-3.5F, 0.0F, -20.0F, 7.0F, 3.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -3.0F, -7.25F, 1.3963F, 0.0F, 0.0F));
+				.texOffs(0, 12).addBox(0.0F, -11.0F, -12.0F, 0.0F, 16.0F, 18.0F, new CubeDeformation(0.0F))
+				.texOffs(70, 79).addBox(-3.5F, 0.0F, -20.0F, 7.0F, 3.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -3.0F, -7.25F, 1.3963F, 0.0F, 0.0F));
 
 		PartDefinition nose = head.addOrReplaceChild("nose", CubeListBuilder.create().texOffs(0, 71).addBox(-2.0F, 0.0F, 0.0F, 5.0F, 4.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 0.0F, -20.0F, 0.5236F, 0.0F, 0.0F));
 
@@ -72,13 +72,13 @@ public class StegoraptorEntityModel<Type extends StegoraptorEntity> extends Enti
 		PartDefinition left_hand = left_wrist.addOrReplaceChild("left_hand", CubeListBuilder.create().texOffs(66, 0).mirror().addBox(-2.5F, -0.75F, -1.0F, 5.0F, 6.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 8.5F, 0.0F, 0.8727F, 0.0F, 0.0F));
 
 		PartDefinition tail1 = body.addOrReplaceChild("tail1", CubeListBuilder.create().texOffs(54, 18).addBox(-4.0F, -3.0F, 0.0F, 8.0F, 8.0F, 12.0F, new CubeDeformation(0.0F))
-		.texOffs(54, 67).addBox(0.0F, -9.0F, 0.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -3.0F, 7.0F, 0.1745F, 0.0F, 0.0F));
+				.texOffs(54, 67).addBox(0.0F, -9.0F, 0.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -3.0F, 7.0F, 0.1745F, 0.0F, 0.0F));
 
 		PartDefinition tail2 = tail1.addOrReplaceChild("tail2", CubeListBuilder.create().texOffs(42, 0).addBox(-3.0F, 0.0F, 0.0F, 6.0F, 6.0F, 12.0F, new CubeDeformation(0.0F))
-		.texOffs(30, 66).addBox(0.0F, -6.0F, 0.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -2.0F, 12.0F));
+				.texOffs(30, 66).addBox(0.0F, -6.0F, 0.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -2.0F, 12.0F));
 
 		PartDefinition tail3 = tail2.addOrReplaceChild("tail3", CubeListBuilder.create().texOffs(0, 46).addBox(-2.0F, 0.0F, 0.0F, 4.0F, 3.0F, 16.0F, new CubeDeformation(0.0F))
-		.texOffs(54, 26).addBox(0.0F, -6.0F, 0.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 2.0F, 12.0F));
+				.texOffs(54, 26).addBox(0.0F, -6.0F, 0.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 2.0F, 12.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}

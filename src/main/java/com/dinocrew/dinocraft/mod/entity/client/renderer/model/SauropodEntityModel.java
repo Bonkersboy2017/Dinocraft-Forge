@@ -103,6 +103,5 @@ public class SauropodEntityModel<Type extends SauropodEntity> extends EntityMode
 
 	@Override
 	public void setupAnim(Type p_102618_, float p_102619_, float p_102620_, float p_102621_, float p_102622_, float p_102623_) {
-
 	}
 }
