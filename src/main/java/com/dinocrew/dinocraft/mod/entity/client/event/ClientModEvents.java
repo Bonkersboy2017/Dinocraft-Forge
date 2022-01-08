@@ -5,6 +5,9 @@ import com.dinocrew.dinocraft.mod.entity.ModEntityTypes;
 import com.dinocrew.dinocraft.mod.entity.client.renderer.*;
 import com.dinocrew.dinocraft.mod.entity.client.renderer.model.*;
 import com.dinocrew.dinocraft.mod.entity.common.entity.StegoraptorEntity;
+import com.dinocrew.dinocraft.mod.registry.RegisterBlocks;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,9 +27,9 @@ public class ClientModEvents {
         event.registerLayerDefinition(TheropodEntityModel.LAYER_LOCATION, TheropodEntityModel::createBodyLayer);
         event.registerLayerDefinition(StegoraptorEntityModel.LAYER_LOCATION, StegoraptorEntityModel::createBodyLayer);
         event.registerLayerDefinition(MicroraptorEntityModel.LAYER_LOCATION, MicroraptorEntityModel::createBodyLayer);
+
         // event.registerLayerDefinition(StegoraptorEntityModel.LAYER_LOCATION, StegoraptorEntityModel::createBodyLayer);
     }
-
 
 
     @SubscribeEvent
@@ -37,6 +40,8 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.STEGORAPTOR_ENTITY.get(), StegoraptorEntityRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.MICRORAPTOR_ENTITY.get(), MicroraptorEntityRenderer::new);
 
+
         //event.registerLayerDefinition(StegoraptorEntityModel.LAYER_LOCATION, StegoraptorEntityModel::createBodyLayer);
     }
+
 }

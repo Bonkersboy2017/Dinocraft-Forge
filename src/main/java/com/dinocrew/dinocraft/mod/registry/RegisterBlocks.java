@@ -1,24 +1,26 @@
 package com.dinocrew.dinocraft.mod.registry;
 
 import com.dinocrew.dinocraft.Dinocraft;
+import com.dinocrew.dinocraft.mod.entity.ModEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.sql.ClientInfoStatus;
 
 
 public class RegisterBlocks {
@@ -91,6 +93,19 @@ public class RegisterBlocks {
     public static  final RegistryObject<Item> DRAGONWOOD_HOE = ITEMS.register("dragonwood_hoe", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static  final RegistryObject<Item> DRAGONWOOD_AXE = ITEMS.register("dragonwood_axe", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
+    public static final RegistryObject<ArmorItem> BRONZIUM_HELMET = ITEMS.register("bronzium_helmet", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ArmorItem> SKELETON_HELMET = ITEMS.register("skeleton_helmet", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+
+    public static final RegistryObject<ArmorItem> BRONZIUM_CHESTPLATE = ITEMS.register("bronzium_chestplate", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ArmorItem> SKELETON_CHESTPLATE = ITEMS.register("skeleton_chestplate", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+
+    public static final RegistryObject<ArmorItem> BRONZIUM_LEGGINGS = ITEMS.register("bronzium_leggings", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ArmorItem> SKELETON_LEGGINGS = ITEMS.register("skeleton_leggings", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+
+    public static final RegistryObject<ArmorItem> BRONZIUM_BOOTS = ITEMS.register("bronzium_boots", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ArmorItem> SKELETON_BOOTS = ITEMS.register("skeleton_boots", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    
+    
     public static  final RegistryObject <Item> RAW_DINO_FLESH = ITEMS.register("raw_dino_flesh", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> DINO_FLESH = ITEMS.register("dino_flesh", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> BERRIES = ITEMS.register("berries", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
@@ -99,6 +114,11 @@ public class RegisterBlocks {
     public static  final RegistryObject <Item> CYAD_SEEDS = ITEMS.register("cyad_seeds", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> ROTTING_CYADS = ITEMS.register("rotting_cyads", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> CYAD_LEAF = ITEMS.register("cyad_leaf", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+
+    public static final RegistryObject<ForgeSpawnEggItem> SAUROPOD_SPAWN_EGG = ITEMS.register("sauropod_entity_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.SAUROPOD_ENTITY, 25600, 9498256, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ForgeSpawnEggItem> TROODON_SPAWN_EGG = ITEMS.register("troodon_entity_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.TRODOON_ENTITY, 137, 0, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ForgeSpawnEggItem> THEROPOD_SPAWN_EGG = ITEMS.register("theropod_entity_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.THEROPOD_ENTITY, 167475200, 16777215, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ForgeSpawnEggItem> MICRORAPTOR_SPAWN_EGG = ITEMS.register("microraptor_entity_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.MICRORAPTOR_ENTITY, 16753920, 132957, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
     public static final RegistryObject<Block> DINOSAUR_TEMPERED_GLASS = BLOCKS.register("dinosaur_tempered_glass", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY, MaterialColor.TERRACOTTA_GRAY).strength(0.2F, 0.2f).sound(SoundType.WET_GRASS)));
     public static final RegistryObject<Item> DINOSAUR_TEMPERED_GLASS_ITEM = ITEMS.register("dinosaur_tempered_glass", () -> new BlockItem(DINOSAUR_TEMPERED_GLASS.get(), new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));

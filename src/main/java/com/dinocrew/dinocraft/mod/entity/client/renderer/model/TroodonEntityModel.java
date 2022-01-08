@@ -53,7 +53,7 @@ public class TroodonEntityModel<Type extends TroodonEntity> extends EntityModel<
 		PartDefinition leftlegbend = leftleg.addOrReplaceChild("leftlegbend", CubeListBuilder.create().texOffs(68, 34).addBox(-2.0F, -4.5F, -2.0F, 4.0F, 10.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 7.149F, 1.5817F, 0.5236F, 0.0F, 0.0F));
 
 		PartDefinition leftfoot = leftlegbend.addOrReplaceChild("leftfoot", CubeListBuilder.create().texOffs(0, 72).addBox(-1.5F, -1.0F, -2.5F, 4.0F, 7.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(23, 51).addBox(-1.0F, 5.0F, -5.0F, 3.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 5.5F, 0.5F, -0.3491F, 0.0F, 0.0F));
+				.texOffs(23, 51).addBox(-1.0F, 5.0F, -5.0F, 3.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 5.5F, 0.5F, -0.3491F, 0.0F, 0.0F));
 
 		PartDefinition toe = leftfoot.addOrReplaceChild("toe", CubeListBuilder.create().texOffs(0, 34).addBox(-1.5F, 0.0F, -1.0F, 3.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(3.5F, 5.0F, -2.0F, 0.0F, 0.5236F, 0.0F));
 
@@ -64,7 +64,7 @@ public class TroodonEntityModel<Type extends TroodonEntity> extends EntityModel<
 		PartDefinition rightlegbend = rightleg.addOrReplaceChild("rightlegbend", CubeListBuilder.create().texOffs(68, 33).addBox(-2.0F, -4.5F, -2.0F, 4.0F, 10.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 7.149F, 1.5817F, 0.5236F, 0.0F, 0.0F));
 
 		PartDefinition rightfoot = rightlegbend.addOrReplaceChild("rightfoot", CubeListBuilder.create().texOffs(0, 72).addBox(-1.5F, -1.0F, -2.5F, 4.0F, 7.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(23, 51).addBox(-1.0F, 5.0F, -5.0F, 3.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 5.5F, 0.5F, -0.3491F, 0.0F, 0.0F));
+				.texOffs(23, 51).addBox(-1.0F, 5.0F, -5.0F, 3.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 5.5F, 0.5F, -0.3491F, 0.0F, 0.0F));
 
 		PartDefinition toetwo = rightfoot.addOrReplaceChild("toetwo", CubeListBuilder.create().texOffs(15, 4).addBox(-1.5F, 0.0F, -1.0F, 3.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(3.5F, 5.0F, -2.0F, 0.0F, 0.5236F, 0.0F));
 
