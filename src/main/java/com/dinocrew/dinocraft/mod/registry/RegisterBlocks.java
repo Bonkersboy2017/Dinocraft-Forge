@@ -93,11 +93,11 @@ public class RegisterBlocks {
     public static  final RegistryObject<Item> DRAGONWOOD_HOE = ITEMS.register("dragonwood_hoe", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static  final RegistryObject<Item> DRAGONWOOD_AXE = ITEMS.register("dragonwood_axe", ()  -> new SwordItem(ModTeirs.DRAGONWOOD, 2, 3f, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
-    public static final RegistryObject<ArmorItem> BRONZIUM_HELMET = ITEMS.register("bronzium_helmet", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ArmorItem> BRONZIUM_HELMET = ITEMS.register("bronzium_helmet", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static final RegistryObject<ArmorItem> SKELETON_HELMET = ITEMS.register("skeleton_helmet", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
     public static final RegistryObject<ArmorItem> BRONZIUM_CHESTPLATE = ITEMS.register("bronzium_chestplate", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
-    public static final RegistryObject<ArmorItem> SKELETON_CHESTPLATE = ITEMS.register("skeleton_chestplate", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static final RegistryObject<ArmorItem> SKELETON_CHESTPLATE = ITEMS.register("skeleton_chestplate", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
     public static final RegistryObject<ArmorItem> BRONZIUM_LEGGINGS = ITEMS.register("bronzium_leggings", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static final RegistryObject<ArmorItem> SKELETON_LEGGINGS = ITEMS.register("skeleton_leggings", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
@@ -136,6 +136,7 @@ public class RegisterBlocks {
     }
 
     public static final void registerAll() {
+
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
