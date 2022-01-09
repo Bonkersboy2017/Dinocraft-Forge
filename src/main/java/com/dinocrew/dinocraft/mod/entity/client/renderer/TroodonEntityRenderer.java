@@ -2,7 +2,6 @@ package com.dinocrew.dinocraft.mod.entity.client.renderer;
 
 import com.dinocrew.dinocraft.Dinocraft;
 import com.dinocrew.dinocraft.mod.entity.client.renderer.model.TroodonEntityModel;
-import com.dinocrew.dinocraft.mod.entity.common.entity.StegoraptorEntity;
 import com.dinocrew.dinocraft.mod.entity.common.entity.TroodonEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
