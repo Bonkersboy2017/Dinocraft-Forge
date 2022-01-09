@@ -123,6 +123,13 @@ public class RegisterBlocks {
     public static final RegistryObject<Block> DINOSAUR_TEMPERED_GLASS = BLOCKS.register("dinosaur_tempered_glass", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY, MaterialColor.TERRACOTTA_GRAY).strength(0.2F, 0.2f).sound(SoundType.WET_GRASS)));
     public static final RegistryObject<Item> DINOSAUR_TEMPERED_GLASS_ITEM = ITEMS.register("dinosaur_tempered_glass", () -> new BlockItem(DINOSAUR_TEMPERED_GLASS.get(), new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
+    public static RegistryObject<Block> DRAGONGRASS = BLOCKS.register("dragongrass", () -> new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.GRASS).strength(0.2f, 0.2f).sound(SoundType.GRASS)));
+    public static RegistryObject<Item> DRAGONGRASS_ITEM = ITEMS.register("dragongrass", () -> new BlockItem(DRAGONGRASS.get(), new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+
+    public static  RegistryObject<Item> SAUROPOD_SKULL = ITEMS.register("sauropod_skull", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static  RegistryObject<Item> TRODOON_SKULL = ITEMS.register("troodon_skull", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+    public static  RegistryObject<Item> THEREPOD_SKULL = ITEMS.register("theropod_skull", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
+
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
         return false;
