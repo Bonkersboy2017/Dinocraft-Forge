@@ -104,8 +104,8 @@ public class RegisterBlocks {
 
     public static final RegistryObject<ArmorItem> BRONZIUM_BOOTS = ITEMS.register("bronzium_boots", () -> new ArmorItem(BronziumInit.BRONZIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static final RegistryObject<ArmorItem> SKELETON_BOOTS = ITEMS.register("skeleton_boots", () -> new ArmorItem(ArmorMaterialInit.SKELETON, EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
-    
-    
+
+
     public static  final RegistryObject <Item> RAW_DINO_FLESH = ITEMS.register("raw_dino_flesh", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> DINO_FLESH = ITEMS.register("dino_flesh", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
     public static  final RegistryObject <Item> BERRIES = ITEMS.register("berries", () -> new Item(new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
@@ -120,7 +120,7 @@ public class RegisterBlocks {
     public static final RegistryObject<ForgeSpawnEggItem> THEROPOD_SPAWN_EGG = ITEMS.register("theropod_entity_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.THEROPOD_ENTITY, 167475200, 16777215, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
     public static final RegistryObject<ForgeSpawnEggItem> MICRORAPTOR_SPAWN_EGG = ITEMS.register("microraptor_entity_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.MICRORAPTOR_ENTITY, 16753920, 132957, new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
-    public static final RegistryObject<Block> DINOSAUR_TEMPERED_GLASS = BLOCKS.register("dinosaur_tempered_glass", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY, MaterialColor.TERRACOTTA_GRAY).strength(0.2F, 0.2f).sound(SoundType.WET_GRASS)));
+    public static final RegistryObject<Block> DINOSAUR_TEMPERED_GLASS = BLOCKS.register("dinosaur_tempered_glass", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY, MaterialColor.TERRACOTTA_GRAY).strength(0.2F, 0.2f).sound(SoundType.WET_GRASS).noOcclusion()));
     public static final RegistryObject<Item> DINOSAUR_TEMPERED_GLASS_ITEM = ITEMS.register("dinosaur_tempered_glass", () -> new BlockItem(DINOSAUR_TEMPERED_GLASS.get(), new Item.Properties().tab(ModItemGroups.DINOCRAFT_TAB)));
 
     public static RegistryObject<Block> DRAGONGRASS = BLOCKS.register("dragongrass", () -> new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.GRASS).strength(0.2f, 0.2f).sound(SoundType.GRASS)));

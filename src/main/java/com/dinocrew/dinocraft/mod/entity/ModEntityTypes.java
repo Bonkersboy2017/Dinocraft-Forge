@@ -18,15 +18,15 @@ public class ModEntityTypes {
             = DeferredRegister.create(ForgeRegistries.ENTITIES, Dinocraft.MOD_ID);
 
         public static final RegistryObject<EntityType<SauropodEntity>> SAUROPOD_ENTITY = ENTITIES.register("sauropod_entity",
-                () -> EntityType.Builder.of(SauropodEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
+                () -> EntityType.Builder.of(SauropodEntity::new, MobCategory.MONSTER).sized(4f, 4f)
                         .build(new ResourceLocation(Dinocraft.MOD_ID, "sauropod_entity").toString()));
 
         public static final RegistryObject<EntityType<TroodonEntity>> TRODOON_ENTITY = ENTITIES.register("troodon_entity",
-            () -> EntityType.Builder.of(TroodonEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
+            () -> EntityType.Builder.of(TroodonEntity::new, MobCategory.MONSTER).sized(2f, 2.5f)
                     .build(new ResourceLocation(Dinocraft.MOD_ID, "troodon_entity").toString()));
 
         public static final RegistryObject<EntityType<TheropodEntity>> THEROPOD_ENTITY = ENTITIES.register("theropod_entity",
-            () -> EntityType.Builder.of(TheropodEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
+            () -> EntityType.Builder.of(TheropodEntity::new, MobCategory.MONSTER).sized(4f, 2.5f)
                     .build(new ResourceLocation(Dinocraft.MOD_ID, "theropod_entity").toString()));
 
         public static final RegistryObject<EntityType<StegoraptorEntity>> STEGORAPTOR_ENTITY = ENTITIES.register("stegoraptor_entity",
@@ -35,7 +35,7 @@ public class ModEntityTypes {
 
 
     public static final RegistryObject<EntityType<MicroraptorEntity>> MICRORAPTOR_ENTITY = ENTITIES.register("microraptor_entity",
-            () -> EntityType.Builder.of(MicroraptorEntity::new, MobCategory.MONSTER).sized(0.8f, 0.6f)
+            () -> EntityType.Builder.of(MicroraptorEntity::new, MobCategory.MONSTER).sized(2f, 2.5f)
                     .build(new ResourceLocation(Dinocraft.MOD_ID, "microraptor_entity").toString()));
 //
 //    public static final RegistryObject<EntityType<MosasaurusEntity>> MOSASAURUS_ENTITY = ENTITIES.register("mosasaurus_entity",
