@@ -30,7 +30,7 @@ public class TroodonEntityModel<Type extends TroodonEntity> extends EntityModel<
 		this.leftleg = root.getChild("leftleg");
 		this.rightleg = root.getChild("rightleg");
 		this.leftarm = root.getChild("leftarm");
-		this.leftarm1= root.getChild("leftarm");
+		this.leftarm1= root.getChild("leftarm1");
 		this.head = root.getChild("head");
 	}
 
@@ -80,9 +80,9 @@ public class TroodonEntityModel<Type extends TroodonEntity> extends EntityModel<
 
 		PartDefinition middlefinger = leftarm.addOrReplaceChild("middlefinger", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, 6.0F, -10.0F, 1.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		PartDefinition leftarm1 = partdefinition.addOrReplaceChild("leftarm", CubeListBuilder.create().texOffs(35, 69).mirror().addBox(-1.5F, -3.2679F, -2.2321F, 3.0F, 9.0F, 3.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(5.5F, 2.0F, -7.5F, 0.2618F, 0.0F, -0.7854F));
+		PartDefinition leftarm1 = partdefinition.addOrReplaceChild("leftarm1", CubeListBuilder.create().texOffs(35, 69).mirror().addBox(-1.5F, -3.2679F, -2.2321F, 3.0F, 9.0F, 3.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(5.5F, 2.0F, -7.5F, 0.2618F, 0.0F, -0.7854F));
 
-		PartDefinition leftarmbend1 = leftarm.addOrReplaceChild("leftarmbend", CubeListBuilder.create().texOffs(0, 13).mirror().addBox(-1.5F, 3.0F, -6.5F, 3.0F, 3.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 2.7321F, -0.7321F));
+		PartDefinition leftarmbend1 = leftarm.addOrReplaceChild("leftarmbend1", CubeListBuilder.create().texOffs(0, 13).mirror().addBox(-1.5F, 3.0F, -6.5F, 3.0F, 3.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 2.7321F, -0.7321F));
 
 		PartDefinition leftfingerleft = leftarm.addOrReplaceChild("leftfingerleft", CubeListBuilder.create().texOffs(45, 35).addBox(-1.0F, -0.5F, -2.5F, 2.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 8.5F, -6.5F, 0.1745F, -0.8727F, 1.3963F));
 
