@@ -21,6 +21,10 @@ public class ClientModEvents {
 
     }
 
+
+
+
+
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(SauropodEntityModel.LAYER_LOCATION, SauropodEntityModel::createBodyLayer);
